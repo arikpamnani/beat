@@ -1,0 +1,292 @@
+<html>
+<head>
+	<!-- <script type="text/javascript" src="tone/Tone.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="uikit/css/uikit.css">
+	<link rel="stylesheet" type="text/css" href="uikit/css/uikit.min.css">
+
+	<link rel="stylesheet" type="text/css" href="uikit/css/uikit-rtl.css">
+	<link rel="stylesheet" type="text/css" href="uikit/css/uikit-rtl.min.css">
+	
+	<!-- for icons (since, ui-kit icons not working) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style type="text/css">
+	body {
+		text-align: center;
+		/*overflow-x: hidden;*/
+	}
+
+	.heading-small {
+		font-size: 2em;
+	}
+
+	.label-left {
+		float: left;
+	}
+
+	label#break {
+		display: block;
+		clear: both;
+	}
+
+	hr {
+	    /*border: none;*/
+	    height: 1.5px;
+	    /* Set the hr color */
+	    background-color: #BBB; /* Modern Browsers */
+	}
+
+	/*button.uk-alert-close {
+		font-size: 1em;
+		line-height: 3em; 
+	}*/
+</style>
+<body>
+	<!-- <h1>
+		beat.js
+	</h1> -->
+	<div uk-grid>
+		<div class="uk-card uk-card-primary uk-card-body uk-card-small uk-width-1-1@m">
+    		<h2 class="uk-heading-primary">beat</h2>
+    		<p>
+    			[Prototype for course project (EE 341)] - beat is a webapp (uses Tone.js library) that allows you to create a tune out of any text. 
+    			<a href="#" class="uk-button uk-button-default uk-button-small">Read more</a>
+    		</p> 
+		</div>
+	</div>
+
+	<!-- === -->
+
+	<div class="uk-text-center" uk-grid>
+		<!-- child 1 -->
+		<div class="uk-width-1-2@m">
+			<h1 class="uk-heading-primary heading-small">Play an Octave <a href="#" class="uk-button uk-button-default uk-button-small">Read more</a></h1>
+			
+			<ul class="uk-tab" uk-switcher>
+			    <li class="uk-active"><a href="#">English</a></li>
+			    <li><a href="#">Indian</a></li>
+			    <li><a href="#">Other</a></li>	  
+
+			</ul>
+
+			<ul class="uk-switcher uk-margin">
+			    <li>
+			    	<div>
+			    		<div class="uk-alert-primary" uk-alert>
+						    <button class="uk-alert-close" type="button" uk-close></button>
+						    <p>Press below buttons for listening to different notes.</p>
+						</div>
+			    		<p uk-margin>
+					        <button class="uk-button-small uk-button-danger octave">C1</button>
+					        <button class="uk-button-small uk-button-danger octave">D1</button>
+					        <button class="uk-button-small uk-button-danger octave">E1</button>
+					        <button class="uk-button-small uk-button-danger octave">F1</button>
+					        <button class="uk-button-small uk-button-danger octave">G1</button>
+					        <button class="uk-button-small uk-button-danger octave">A1</button>
+					        <button class="uk-button-small uk-button-danger octave">B1</button>
+					    </p>					        
+					    <p uk-margin>
+					        <button class="uk-button-small uk-button-danger octave">C2</button>
+					        <button class="uk-button-small uk-button-danger octave">D2</button>
+					        <button class="uk-button-small uk-button-danger octave">E2</button>
+					        <button class="uk-button-small uk-button-danger octave">F2</button>
+					        <button class="uk-button-small uk-button-danger octave">G2</button>
+					        <button class="uk-button-small uk-button-danger octave">A2</button>
+					        <button class="uk-button-small uk-button-danger octave">B2</button>
+					    </p>
+					    <p uk-margin>
+					        <button class="uk-button-small uk-button-danger octave">C3</button>
+					        <button class="uk-button-small uk-button-danger octave">D3</button>
+					        <button class="uk-button-small uk-button-danger octave">E3</button>
+					        <button class="uk-button-small uk-button-danger octave">F3</button>
+					        <button class="uk-button-small uk-button-danger octave">G3</button>
+					        <button class="uk-button-small uk-button-danger octave">A3</button>
+					        <button class="uk-button-small uk-button-danger octave">B3</button>
+					    </p>
+					    <p uk-margin>
+					        <button class="uk-button-small uk-button-danger octave">C4</button>
+					        <button class="uk-button-small uk-button-danger octave">D4</button>
+					        <button class="uk-button-small uk-button-danger octave">E4</button>
+					        <button class="uk-button-small uk-button-danger octave">F4</button>
+					        <button class="uk-button-small uk-button-danger octave">G4</button>
+					        <button class="uk-button-small uk-button-danger octave">A4</button>
+					        <button class="uk-button-small uk-button-danger octave">B4</button>
+					    </p>
+					    <p uk-margin>
+					        <button class="uk-button-small uk-button-danger octave">C5</button>
+					        <button class="uk-button-small uk-button-danger octave">D5</button>
+					        <button class="uk-button-small uk-button-danger octave">E5</button>
+					        <button class="uk-button-small uk-button-danger octave">F5</button>
+					        <button class="uk-button-small uk-button-danger octave">G5</button>
+					        <button class="uk-button-small uk-button-danger octave">A5</button>
+					        <button class="uk-button-small uk-button-danger octave">B5</button>
+					    </p>
+					    <p uk-margin>
+					        <button class="uk-button-small uk-button-danger octave">C6</button>
+					        <button class="uk-button-small uk-button-danger octave">D6</button>
+					        <button class="uk-button-small uk-button-danger octave">E6</button>
+					        <button class="uk-button-small uk-button-danger octave">F6</button>
+					        <button class="uk-button-small uk-button-danger octave">G6</button>
+					        <button class="uk-button-small uk-button-danger octave">A6</button>
+					        <button class="uk-button-small uk-button-danger octave">B6</button>
+					    </p>
+					    <p uk-margin>
+					        <button class="uk-button-small uk-button-danger octave">C7</button>
+					        <button class="uk-button-small uk-button-danger octave">D7</button>
+					        <button class="uk-button-small uk-button-danger octave">E7</button>
+					        <button class="uk-button-small uk-button-danger octave">F7</button>
+					        <button class="uk-button-small uk-button-danger octave">G7</button>
+					        <button class="uk-button-small uk-button-danger octave">A7</button>
+					        <button class="uk-button-small uk-button-danger octave">B7</button>
+					    </p>
+					    <p uk-margin>
+					        <button class="uk-button-small uk-button-danger octave">C8</button>
+					        <button class="uk-button-small uk-button-danger octave">D8</button>
+					        <button class="uk-button-small uk-button-danger octave">E8</button>
+					        <button class="uk-button-small uk-button-danger octave">F8</button>
+					        <button class="uk-button-small uk-button-danger octave">G8</button>
+					        <button class="uk-button-small uk-button-danger octave">A8</button>
+					        <button class="uk-button-small uk-button-danger octave">B8</button>
+					    </p>
+					    <p uk-margin>
+					        <button class="uk-button-small uk-button-danger octave">C9</button>
+					        <button class="uk-button-small uk-button-danger octave">D9</button>
+					        <button class="uk-button-small uk-button-danger octave">E9</button>
+					        <button class="uk-button-small uk-button-danger octave">F9</button>
+					        <button class="uk-button-small uk-button-danger octave">G9</button>
+					        <button class="uk-button-small uk-button-danger octave">A9</button>
+					        <button class="uk-button-small uk-button-danger octave">B9</button>
+					    </p>
+					</div>	
+			    </li>
+			    <li>
+			    	<!-- TODO -->
+			    </li>
+			    <li>
+			    	<!-- TODO -->
+			    </li>
+			</ul>
+    	</div>
+
+    	<!-- child 2 -->
+    	<div class="uk-width-1-2@m">
+    		<h4 class="uk-heading-primary heading-small">Text to Tune <a href="#" class="uk-button uk-button-default uk-button-small">Read more</a></h4>
+    		<!-- ==================================================== -->
+    		<div uk-alert class="uk-alert-primary">
+			    <button class="uk-alert-close" type="button" uk-close></button>
+			    <p>Enter some text, choose a tune, specify delay and duration.</p>
+			</div>
+    		<form>
+    			<fieldset class="uk-fieldset">
+			    	<label class="uk-form-label label-left">TEXT</label>
+			        <div class="uk-margin">
+			            <textarea class="uk-textarea" rows="5"></textarea>
+			        </div>
+			        <label class="uk-form-label label-left">TUNE</label>
+			        <div class="uk-margin">
+				        <div class="uk-form-controls">
+				            <select class="uk-select" id="tune">
+				                <option>Tune 1</option>
+				                <!-- <option>Strategy 2</option>
+				                <option>Strategy 3</option>
+				                <option>Strategy 4</option>
+				                <option>Strategy 5</option>
+				                <option>Strategy 6</option> -->
+				            </select>
+				        </div>
+				    </div>
+				    
+				    <div class="uk-margin">
+				        <label class="uk-form-label label-left">DELAY</label>
+				        <div class="uk-form-controls">
+				            <input class="uk-input" id="delay" type="text" value=0.05>
+				        </div>
+				    </div>
+
+				    <div class="uk-margin">
+				        <label class="uk-form-label label-left">DURATION OF EACH NOTE</label>
+				        <div class="uk-form-controls">
+				            <input class="uk-input" id="duration" type="text" value=0.25>
+				        </div>
+				    </div>
+
+				    <label class="uk-form-label label-left" id="break">MODULATION TYPE</label>
+			        <div class="uk-form-controls">
+			        	<label><input class="uk-checkbox" type="radio" id="none" name="radio" checked> NONE</label>
+            			<label><input class="uk-checkbox" type="radio" id="fm" name="radio"> FM</label>
+            			<label><input class="uk-checkbox" type="radio" id="am" name="radio"> AM</label>
+        			</div>
+
+				    <div class="uk-margin">
+				        <label class="uk-form-label label-left">MODULATION INDEX</label>
+				        <div class="uk-form-controls">
+				            <input class="uk-input" id="modind" type="text" value=5>
+				        </div>
+				    </div>
+
+				    <div class="uk-margin">
+				        <label class="uk-form-label label-left">CARRIER FREQUENCY</label>
+				        <div class="uk-form-controls">
+				            <input class="uk-input" id="fc" type="text" value=1000>
+				        </div>
+				    </div>
+    			</fieldset>
+    		</form>
+    		<!-- ==================================================== -->
+    		<p class="uk-margin">
+    			<button class="uk-button uk-button-secondary button-play">Play <i class="fa fa-play"></i></button>
+    			<button class="uk-button uk-button-danger-disable button-save">Save as MP3 <i class="fa fa-save"></i></button>
+    		</p>
+    	</div>
+	</div>
+
+	<!-- === -->
+	<hr>
+	<div class="uk-text-center" uk-grid id="create">
+		<div class="uk-width-1-1@m">
+
+			<h1 class="uk-heading-primary heading-small">Create a Tune <a href="#" class="uk-button uk-button-default uk-button-small">Read more</a></h1>
+			<div uk-alert class="uk-alert-primary">
+			    <button class="uk-alert-close" type="button" uk-close></button>
+			    <p>Enter some text, choose a tune, specify delay and duration.</p>
+			</div>
+			<div class="uk-width-1-1@m">
+				<form>
+				    <fieldset class="uk-fieldset" style="font-size: 1.5em;">
+				    	<!--  -->
+				    </fieldset>
+				</form>
+			</div>
+			<!--  -->
+			<div class="uk-width-1-1@m">
+				<p class="uk-margin">
+					<button class="uk-button uk-button-primary button-play register">Register</i></button>
+					<button class="uk-button uk-button-secondary button-play button-play-2">Play <i class="fa fa-play"></i></button>
+					<button class="uk-button uk-button-danger-disable button-save">Save as MP3 <i class="fa fa-save"></i></button>
+				</p>
+			</div>
+	</div>
+	</div>
+
+	<!-- === -->
+
+	<div uk-grid>
+		<div class="uk-card uk-card-secondary uk-card-body uk-card-small uk-width-1-1@m">
+    		<p></p> 
+		</div>
+	</div>
+
+	<!-- === -->
+
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> -->
+<script type="text/javascript" src="js/note-frequencies.json"></script>
+<script type="text/javascript" src="js/beat.js"></script>
+<!-- <script type="text/javascript" src="js/uikit-icons.js"></script>
+<script type="text/javascript" src="js/uikit-icons.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script> -->
+<script type="text/javascript" src="uikit/js/uikit.js"></script>
+<script type="text/javascript" src="uikit/js/uikit.min.js"></script>
+</body>
+</html>
