@@ -48,7 +48,7 @@ function playOctave(duration) {
 /* tune strategies */
 
 var strategy_1 = {
-	'A': ['C4'], 'B': ['D4'], 'C': ['E4'], 'D': ['F4'], 'E': ['G4'], 'F': ['A4'], 'G': ['B4'], 'H': ['C5'], 'I': ['G4'], 'J': ['C4'], 'K': ['D#'], 'L': ['A4'], 'M': ['E4'], 
+	'A': ['C4'], 'B': ['D4'], 'C': ['E4'], 'D': ['F4'], 'E': ['G4'], 'F': ['A4'], 'G': ['B4'], 'H': ['C5'], 'I': ['G4'], 'J': ['C4'], 'K': ['D#4'], 'L': ['A4'], 'M': ['E4'], 
 	'N': ['F4'], 'O': ['E4'], 'P': ['G4'], 'Q': ['B4'], 'R': ['G4'], 'S': ['A4'], 'T': ['B4'], 'U': ['C4'], 'V': ['F4'], 'W': ['G4'], 'X': ['B4'], 'Y': ['C4'], 'Z': ['D4']
 }
 
@@ -166,7 +166,7 @@ function makeTune(strategy) {
 	node.oscillator.stop(currentTime);
 }
 
-document.querySelector("textarea").value="ABCDEFGH";
+/*document.querySelector("textarea").value="ABCDEFGH";*/
 playOctave();
 
 // play/stop button
