@@ -48,8 +48,8 @@ function playOctave(duration) {
 /* tune strategies */
 
 var strategy_1 = {
-	'A': ['C4'], 'B': ['D4'], 'C': ['E4'], 'D': ['F4'], 'E': ['G4'], 'F': ['A4'], 'G': ['B4'], 'H': ['C5'], 'I': ['G4'], 'J': ['C4'], 'K': ['D#4'], 'L': ['A4'], 'M': ['E4'], 
-	'N': ['F4'], 'O': ['E4'], 'P': ['G4'], 'Q': ['B4'], 'R': ['G4'], 'S': ['A4'], 'T': ['B4'], 'U': ['C4'], 'V': ['F4'], 'W': ['G4'], 'X': ['B4'], 'Y': ['C4'], 'Z': ['D4']
+	'A': ['C4', 'G3', 'G3', 'A3', 'G3', 'B3', 'C4'], 'B': ['D4', 'D#4'], 'C': ['E4'], 'D': ['F4'], 'E': ['G4'], 'F': ['A4'], 'G': ['B4'], 'H': ['C5'], 'I': ['G4'], 'J': ['C4'], 'K': ['D#4'], 'L': ['A4'], 'M': ['E4'], 
+	'N': ['F4'], 'O': ['E4'], 'P': ['G4'], 'Q': ['B4'], 'R': ['C4', 'C#4', 'G3', 'A3', 'C4'], 'S': ['A4'], 'T': ['B4'], 'U': ['C4'], 'V': ['F4'], 'W': ['G4'], 'X': ['B4'], 'Y': ['C4'], 'Z': ['D4']
 }
 
 var strategy_ascii = {
@@ -166,7 +166,7 @@ function makeTune(strategy) {
 	node.oscillator.stop(currentTime);
 }
 
-/*document.querySelector("textarea").value="ABCDEFGH";*/
+document.querySelector("textarea").value="Amazingly few discotheques provide jukeboxes";
 playOctave();
 
 // play/stop button
@@ -181,8 +181,18 @@ document.querySelector("button.button-play").addEventListener('click', function(
 	}	
 	
 	else {
-		// var currentTime = audioContext.currentTime;
-		makeTune(strategy_1);
+		/* get strategy choice from the user */
+		var choice = document.querySelector("select");
+		if(choice.value == "TUNE_ASCII") {
+			// ASCII strategy
+			makeTune(strategy_2);
+		}
+		else if(choice.value == "TUNE_NEW") {
+			// NEW strategy
+			makeTune(strategy_1);
+		}
+
+		/*makeTune(strategy);*/
 		
 		stop = true;
 		this.innerHTML = "Stop <i class='fa fa-stop'></i>";
@@ -242,3 +252,5 @@ document.querySelector("button.button-play-2").addEventListener('click', functio
 		this.innerHTML = "Stop <i class='fa fa-stop'></i>";
 	}
 }); 
+
+

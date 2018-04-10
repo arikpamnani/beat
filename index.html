@@ -41,7 +41,8 @@
 		line-height: 3em; 
 	}*/
 </style>
-<body>
+
+<body onload="zoom()">
 	<!-- <h1>
 		beat.js
 	</h1> -->
@@ -186,12 +187,8 @@
 			        <div class="uk-margin">
 				        <div class="uk-form-controls">
 				            <select class="uk-select" id="tune">
-				                <option>Tune 1</option>
-				                <!-- <option>Strategy 2</option>
-				                <option>Strategy 3</option>
-				                <option>Strategy 4</option>
-				                <option>Strategy 5</option>
-				                <option>Strategy 6</option> -->
+				                <option value="TUNE_ASCII">TUNE_ASCII</option>
+				                <option value="TUNE_NEW">TUNE_NEW</option>
 				            </select>
 				        </div>
 				    </div>
@@ -206,7 +203,7 @@
 				    <div class="uk-margin">
 				        <label class="uk-form-label label-left">DURATION OF EACH NOTE</label>
 				        <div class="uk-form-controls">
-				            <input class="uk-input" id="duration" type="text" value=0.25>
+				            <input class="uk-input" id="duration" type="text" value=0.20>
 				        </div>
 				    </div>
 
@@ -218,7 +215,7 @@
         			</div>
 
 				    <div class="uk-margin">
-				        <label class="uk-form-label label-left">MODULATION INDEX</label>
+				        <label class="uk-form-label label-left">MODULATOR GAIN</label>
 				        <div class="uk-form-controls">
 				            <input class="uk-input" id="modind" type="text" value=5>
 				        </div>
@@ -278,7 +275,11 @@
 
 	<!-- === -->
 
-
+<script type="text/javascript">
+   	function zoom() {
+    	document.body.style.zoom = "75%" 
+	}
+</script>
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> -->
 <script type="text/javascript" src="js/note-frequencies.json"></script>
